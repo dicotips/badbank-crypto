@@ -2,12 +2,16 @@
 
 # Descripción
 
-The Pacmen Project is part of assignments for the Week 7 in the [Professional Certificate in Coding: Full Stack Development with MERN](https://xpro.mit.edu/programs/program-v1:xPRO+PCCx+R1/). In this project, I use javascript to show how the Pacman opens and closes his mouth. This object is injected through a Factory Pattern into DOM and the speed can be updated dynamically.
+El Proyecto de BadBank-Crypto esta desarrollado en React.js con diseño SPA. Este
+proyecto es parte de la semana 18 y para completar los requerimientos del curso de
+[Professional Certificate in Coding: Full Stack Development with MERN](https://xpro.mit.edu/programs/program-v1:xPRO+PCCx+R1/).
+
+En este projecto utilice React.js, Bootstrap Framework y Formik.
 
 ### Licencia: [MIT License](https://opensource.org/licenses/MIT)
 ## Como ejecutar
 
-You can download the source code cloning this repository using Git:
+Pedes descargar el codigo fuente de este repositorio usando Git:
 
 1. Abre tu App de Terminal favorita (Unix, Linux o Macos), como "Terminal", "Command", "Console", "iTerm2", u otros.
 
