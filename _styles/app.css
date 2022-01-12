@@ -1,5 +1,6 @@
 .nav-item:hover {
-    background: rgb(6, 120, 242);
+    background: rgb(242, 187, 6);
+    border-radius: 3px;
 }
 
 .hoverable:hover>.hoverable__tooltip {
@@ -24,7 +25,6 @@
     font-size: 18px;
   }
   
-  /* Add a green text color and a checkmark when the requirements are right */
   .valid {
     color: green;
   }
@@ -35,7 +35,6 @@
     content: "✔";
   }
   
-  /* Add a red text color and an "x" when the requirements are wrong */
   .invalid {
     color: red;
   }

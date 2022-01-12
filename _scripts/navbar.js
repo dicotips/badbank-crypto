@@ -4,7 +4,7 @@ function NavBar(){
     
     <nav   fill variant="tabs"  className="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="./index.html">
-          <img src="../_img/bitcoin_logo.png" width="30" height="30" />
+          <img src="./_img/bitcoin_logo.png" width="30" height="30" />
           BadBank-Crypto
       </a>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

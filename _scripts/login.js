@@ -83,7 +83,7 @@ function Login() {
 			body = {show ? (
 				<>
 				<div className="text-left">	
-						<img src="../_img/bitcoin_logo.png" className="img-fluid left" alt="Responsive image" width="22%"/><br/><br/>
+						<img src="./_img/bitcoin_logo.png" className="img-fluid left" alt="Responsive image" width="22%"/><br/><br/>
 					</div>
 				Email<br/>
 				<input type="input" className="form-control" id="email" placeholder="Ingrese Email" value={emailinput} onChange={e => setEmailinput(e.currentTarget.value)}/><br/>

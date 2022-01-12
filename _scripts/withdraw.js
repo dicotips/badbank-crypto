@@ -45,16 +45,14 @@ function Withdraw() {
 	}
 	// Validates that it is a number and you will not overdraft
 	function withdrawMoney() {
-		if (!isNaN(withdraw) && withdraw > 0 && withdraw <= balance){
+		if (!isNaN(withdraw) && withdraw > 0 && withdraw <= balance) {
 			let newBalance = Number(balance) - Number(withdraw);
 			console.log(Number(newBalance));
-      setBalance(newBalance);
-      setStatus(`$${withdraw} was successfully withdrawn from your account`);
-      setDeposit('');
-      
 			let tracker = false;
-			
-			
+      		setBalance(newBalance);
+      		setStatus(`$${withdraw} retirados de la cuenta.`);
+      		setWithdraw('');
+
 			//Check if the username or passwords match anyone is the database
 			for (const {email, password, balance} of ctx.users) {
 				console.log(`Checking ${currentemail} ${currentpass} against ${email} ${password}`);
@@ -64,8 +62,6 @@ function Withdraw() {
 						if (ctx.users[i].email == currentemail) {
 							console.log(`Checking ${email}`)
 							ctx.users[i].balance = Number(newBalance);
-							var datetime = `Withdrew $${withdraw} on ${newDate.today()}`;
-							ctx.users[i].submissions.push(datetime);
 							tracker = true;
 						}
 					}
@@ -74,7 +70,7 @@ function Withdraw() {
 			
 			//Making all changes to state
 			if (tracker) {
-				setStatus(`$${withdraw} successfully withdrawn from account`);
+				setStatus(`$${withdraw} retirados de la cuenta.`);
 				setTimeout(() => setStatus(''), 5000);
 				setWithdraw('');
 				setBalance(Number(newBalance))
@@ -104,7 +100,7 @@ function Withdraw() {
 			body = {show ? (
         <>
 				<div className="text-left">	
-						<img src="../_img/bitcoin_logo.png" className="img-fluid left" alt="Responsive image" width="30%"/><br/><br/>
+						<img src="./_img/bitcoin_logo.png" className="img-fluid left" alt="Responsive image" width="30%"/><br/><br/>
 					</div>
 
 				Por Favor <a href='#/login/' className="btnDeposit" data-toggle="tooltip" title="Ingrese a su Cuenta">Inicie Sesion</a> para depositar fondos y ver su Balance. <br/><br/><br/>

@@ -8,6 +8,7 @@ function Deposit() {
 	const [balance, setBalance]				= React.useState('');
 	const [deposit, setDeposit]				= React.useState('');
 	const ctx = React.useContext(UserContext);
+	let newDate = new Date()
 	
 	//Check if any user is currently logged in
 	if (show) {
@@ -45,15 +46,15 @@ function Deposit() {
 	}
 
 	function depositMoney() {
-		if (!isNaN(deposit) && deposit > 0){
+		if (!isNaN(deposit) && deposit > 0) {
 			let newBalance = Number(balance) + Number(deposit);
 			console.log(Number(newBalance));
 			let tracker = false;
-      setBalance(newBalance)
-      setDeposit('')
+      		setBalance(newBalance)
+      		setDeposit('')
 			setStatus(`$${deposit} depositados exitosamente en su cuenta`);
-			
-//Check if the username or passwords match anyone is the database
+		
+			//Check if the username or passwords match anyone is the database
 			for (const {email, password, balance} of ctx.users) {
 				console.log(`Checking ${currentemail} ${currentpass} against ${email} ${password}`);
 				if (currentemail == email && currentpass == password) {
@@ -62,14 +63,12 @@ function Deposit() {
 						if (ctx.users[i].email == currentemail) {
 							console.log(`Checking ${email}`)
 							ctx.users[i].balance = Number(newBalance);
-							var datetime = `Deposited $${deposit} on ${newDate.today()}`;
-							ctx.users[i].submissions.push(datetime);
 							tracker = true;
 						}
 					}
 				}
 			}
-			
+		
 			//Making all changes to state
 			if (tracker) {
 				setStatus(`$${deposit} depositados exitosamente en su cuenta`);
@@ -82,10 +81,10 @@ function Deposit() {
 			setDeposit('');
 			setTimeout(() => setStatus(''), 5000);
 		} else {
-		setStatus('Error: Ingrese un valor numerico en deposito. intente denuevo.');
-		setDeposit('');
-		setTimeout(() => setStatus(''), 5000);
-	}
+			setStatus('Error: Ingrese un valor numerico en deposito. intente denuevo.');
+			setDeposit('');
+			setTimeout(() => setStatus(''), 5000);
+		}
 		return;
 	}
 	
@@ -98,7 +97,7 @@ function Deposit() {
 			body = {show ? (
 				<>
 				<div className="text-left">	
-						<img src="../_img/bitcoin_logo.png" className="img-fluid left" alt="Responsive image" width="30%"/><br/><br/>
+						<img src="./_img/bitcoin_logo.png" className="img-fluid left" alt="Responsive image" width="30%"/><br/><br/>
 					</div>
 
 				Por favor <a href='#/login/' className="btnDeposit" data-toggle="tooltip" title="Ingrese a su Cuenta">Inicie Sesion</a> para depositar fondos y verificar su balance. <br/><br/><br/>

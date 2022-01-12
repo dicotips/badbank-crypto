@@ -76,7 +76,7 @@ function CreateAccount(){
       body={show ? (  
         <>
         <div className="text-left">	
-					<img src="../_img/bitcoin_logo.png" className="img-fluid left" alt="Responsive image" width="22%"/>
+					<img src="./_img/bitcoin_logo.png" className="img-fluid left" alt="Responsive image" width="22%"/>
           <br/><br/>
 				</div>
         Nombre<br/>
@@ -101,7 +101,7 @@ function CreateAccount(){
       ):(
         <>
         <div className="text-left">	
-          <img src="../_img/bitcoin_logo.png" className="img-fluid left" alt="Responsive image" width="22%"/><br/><br/>
+          <img src="./_img/bitcoin_logo.png" className="img-fluid left" alt="Responsive image" width="22%"/><br/><br/>
         </div>
         <h6>Cuenta Creada! <a href="#Login" class="btnDeposit">Inicie Sesion</a> </h6>  <br/><br/>
         <button type="submit" className="btn btn-primary" onClick={clearForm}>Crear Otra Cuenta</button>
