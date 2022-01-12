@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>BadBank-Crypto</title>
+    <link rel="shortcut icon" type="image/jpg" href="_img/favicon.ico"/>
+    <!-- bootstrap css -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- Custom css -->
+    <link
+      rel="stylesheet"
+      href="_styles/app.css"
+    />
+    <!-- JS bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <!-- We will put our teact component inside this div -->
+    <div id="root"></div>
+    <!-- formik -->
+    <script src="https://unpkg.com/formik/dist/formik.umd.production.min.js"></script>
+
+    <!-- load react -->
+    <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-router@5.2.1/umd/react-router.min.js" crossorigin></script>
+    <script
+      src="https://unpkg.com/react-router-dom@5.2.1/umd/react-router-dom.min.js"
+      crossorigin
+    ></script>
+
+    <!-- load our react component. -->
+    <script src="_scripts/context.js" defer type="text/babel"></script>
+    <script src="_scripts/navbar.js" defer type="text/babel"></script>
+    <script src="_scripts/createaccount.js" defer type="text/babel"></script>
+    <script src="_scripts/login.js" defer type="text/babel"></script>
+    <script src="_scripts/deposit.js" defer type="text/babel"></script>
+    <script src="_scripts/withdraw.js" defer type="text/babel"></script>
+    <script src="_scripts/balance.js" defer type="text/babel"></script>
+    <script src="_scripts/alldata.js" defer type="text/babel"></script>
+    <script src="_scripts/home.js" defer type="text/babel"></script>
+    <script src="_scripts/index.js" defer type="text/babel"></script>
+  </body>
+</html>
