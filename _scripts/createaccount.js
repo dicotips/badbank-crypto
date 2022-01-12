@@ -31,6 +31,18 @@ function CreateAccount(){
     
   }
 
+  function isEmail(val) {
+    let regEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if(!regEmail.test(val)){
+      setStatus('Email invalido.');
+      setTimeout(() => setStatus(''),5000);
+      return;
+    }
+    else {
+      return true;
+    }
+  }
+
   //Determine if to set the button disabled or not
   if (!name & !email & !password) {
     //Check if button should be enabled
@@ -56,6 +68,7 @@ function CreateAccount(){
     if (!validate(email,    'Ingrese Email valido'))    return;
     if (!validate (password, 'Password debe incluir 8 caracteres')) return;
     if (!checkPass(password)) return;
+    if (!isEmail(email)) return;
     ctx.users.push({name,email,password,balance:100});
     setShow(false);
   }    
